@@ -1,0 +1,148 @@
+body {
+  background-color: #F2F0F5;
+  font-family: 'Roboto', sans-serif;
+  margin: 10px; }
+
+/* CSS NAV */
+.nav {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between; }
+  .nav__logo {
+    height: 80px; }
+    .nav__logo img:hover {
+      transform: skewX(-10deg); }
+  .nav__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; }
+    .nav__right li {
+      display: inline; }
+    .nav__right a {
+      text-decoration: none; }
+    .nav__right__registro {
+      font-weight: 600;
+      margin: 5px 0px; }
+      .nav__right__registro__link {
+        color: #67368B; }
+        .nav__right__registro__link:hover {
+          color: #000000; }
+    .nav__right__menu {
+      background-color: #3C2F87;
+      margin: 5px 0px;
+      padding: 10px 17px; }
+      .nav__right__menu li {
+        padding: 0px 3px; }
+      .nav__right__menu__link {
+        color: white; }
+        .nav__right__menu__link:hover {
+          color: #67368B; }
+
+ul {
+  list-style: none;
+  padding-left: 0px; }
+
+#logIn {
+  border-left: 2px solid #67368B;
+  padding-left: 3px; }
+
+/* CSS FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 20px; }
+  .footer__link {
+    color: #67368B; }
+    .footer__link:hover {
+      color: #3C2F87; }
+
+/* ACA EMPIEZA CSS CONTENIDO */
+@keyframes aparecer {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.content, .content__capitulo, .content__indexCap {
+  background-color: #67368B;
+  color: white; }
+  .content__titulo {
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    animation-duration: 3s;
+    animation-name: aparecer; }
+  .content__sinopsis {
+    padding: 20px;
+    box-sizing: border-box; }
+    .content__sinopsis__img {
+      padding: 0px; }
+  .content__capitulo {
+    padding: 20px;
+    box-sizing: border-box; }
+  .content__indexCap {
+    padding: 15px 10px;
+    text-align: center; }
+    .content__indexCap h3 {
+      text-decoration: underline;
+      margin-bottom: 10px; }
+    .content__indexCap__div {
+      margin-bottom: 20px;
+      transition: transform 1s; }
+      .content__indexCap__div:hover {
+        transform: scale(1.5, 1.5); }
+    .content__indexCap__link {
+      color: #ffffff; }
+      .content__indexCap__link:hover {
+        color: #3C2F87;
+        text-decoration: none; }
+  .content__about {
+    padding: 20px; }
+    .content__about__img {
+      float: left;
+      margin-right: 20px; }
+  .content__formWrap {
+    display: flex;
+    justify-content: center; }
+  .content__form {
+    padding: 15px; }
+    .content__form__last {
+      text-align: center; }
+
+table, th, td {
+  border: 1px solid black; }
+
+th, td {
+  background-color: #67368B;
+  color: white; }
+
+td {
+  padding: 10px 20px; }
+
+#myModal {
+  color: #000000; }
+
+.overflow {
+  overflow: auto; }
+
+@media only screen and (max-width: 768px) {
+  .mainLeer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "indexCap" "capitulo"; }
+  .content__indexCap {
+    grid-area: indexCap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px; }
+    .content__indexCap h3 {
+      display: none; }
+    .content__indexCap__div {
+      margin-bottom: 0; }
+  .content__capitulo {
+    grid-area: capitulo; } }
+
+/* display:grid se aplica sobre el padre directo de las que van a ser las areas */

@@ -1,0 +1,228 @@
+@charset "UTF-8";
+body {
+  background-color: #F2F0F5;
+  font-family: 'Roboto', sans-serif;
+  margin: 10px; }
+
+/* CSS NAV */
+.nav {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  display: flex;
+  justify-content: space-between;
+
+  &__logo { 
+    height: 80px;
+    
+    & img:hover {
+      transform: skewX(-10deg);
+    }
+  }
+
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+
+    & li {
+      display: inline;
+    }
+    
+    & a {
+      text-decoration: none; 
+    }
+      
+    &__registro {
+      font-weight: 600;
+      margin: 5px 0px; 
+
+      &__link {
+        color: #67368B; 
+      
+        &:hover {
+          color: #000000; 
+        }
+      }
+    }
+
+    &__menu {
+      background-color: #3C2F87;
+      margin: 5px 0px;
+      padding: 10px 17px;
+    
+      & li {
+        padding: 0px 3px;
+      }
+  
+      &__link {
+        color: white; 
+
+        &:hover {
+          color: #67368B; 
+        }
+      }
+    }
+  }
+} 
+
+ul {
+  list-style: none;
+  padding-left: 0px; }
+
+#logIn {
+  border-left: 2px solid #67368B;
+  padding-left: 3px; }
+
+/* CSS FOOTER */
+.footer {
+  text-align: center;
+  margin-top: 20px;
+
+  &__link {
+    color: #67368B;
+
+    &:hover {
+      color: #3C2F87;
+    }
+  }
+}
+
+/* ACA EMPIEZA CSS CONTENIDO */
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.content {
+  background-color: #67368B;
+  color: white; 
+
+  &__titulo {
+    text-transform: uppercase;
+    font-size: 2em;
+    margin-top: 0px;
+    margin-bottom: 20px; 
+    animation-duration: 3s;
+    animation-name: aparecer;
+
+  }
+
+  &__sinopsis {
+    padding: 20px;
+    box-sizing: border-box; 
+
+    &__img {
+      padding: 0px; 
+    }
+  }
+
+  &__capitulo {
+    @extend .content;
+    padding: 20px;
+    box-sizing: border-box; 
+  }
+
+  &__indexCap {
+    @extend .content;
+    padding: 15px 10px;
+    text-align: center; 
+
+    & h3 {
+      text-decoration: underline;
+      margin-bottom: 10px; 
+    }
+
+    &__div {
+      margin-bottom: 20px;
+      transition: transform 1s;
+    
+      &:hover {
+        transform: scale(1.5,1.5); 
+      }
+    }
+
+    &__link {
+      color: #ffffff; 
+
+      &:hover {
+        color: #3C2F87;
+        text-decoration: none; 
+      }
+    }
+  }
+
+  &__about {
+    padding: 20px; 
+
+    &__img {
+      float: left;
+      margin-right: 20px; 
+    }
+  }
+
+  &__formWrap {
+    display: flex;
+    justify-content: center; 
+  }
+
+  &__form {
+    padding: 15px; 
+
+    &__last {
+      text-align: center; 
+    }
+  }
+}
+
+table, th, td {
+  border: 1px solid black; }
+
+th, td {
+  background-color: #67368B;
+  color: white; 
+}
+
+td {
+  padding: 10px 20px; 
+}
+
+#myModal {
+  color: #000000;
+}
+
+.overflow {
+  overflow: auto; 
+}
+
+@media only screen and (max-width: 768px) {
+  .mainLeer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "indexCap" "capitulo";
+  }
+
+  .content__indexCap {
+    grid-area: indexCap;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 15px;
+  
+    & h3 {
+      display: none;
+    }
+
+    &__div {
+      margin-bottom: 0;
+    }
+  }
+
+  .content__capitulo {
+    grid-area: capitulo;
+  }
+} /* display:grid se aplica sobre el padre directo de las que van a ser las areas */
