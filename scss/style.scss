@@ -101,8 +101,18 @@ ul {
   background-color: #67368B;
   color: white; 
 
-  &__titulo {
-    text-transform: uppercase;
+  &__tituloMain {
+    font-size: 3em;
+    text-align: center;
+    margin: 0px;
+    padding: 20px 0px;
+
+    & span {
+      text-transform: uppercase;
+    }
+  }
+
+  &__tituloSection {
     font-size: 2em;
     margin-top: 0px;
     margin-bottom: 20px; 
@@ -113,10 +123,13 @@ ul {
 
   &__sinopsis {
     padding: 20px;
+    padding-left: 40px;
     box-sizing: border-box; 
 
     &__img {
-      padding: 0px; 
+      padding: 40px; 
+      padding-top: 58px;
+      box-sizing: border-box;
     }
   }
 
@@ -156,8 +169,9 @@ ul {
   }
 
   &__about {
-    padding: 20px; 
-
+    padding: 20px 100px;
+    border-top: 1px solid white;
+    
     &__img {
       float: left;
       margin-right: 20px; 

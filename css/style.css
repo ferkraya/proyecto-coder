@@ -66,8 +66,14 @@ ul {
 .content, .content__capitulo, .content__indexCap {
   background-color: #67368B;
   color: white; }
-  .content__titulo {
-    text-transform: uppercase;
+  .content__tituloMain {
+    font-size: 3em;
+    text-align: center;
+    margin: 0px;
+    padding: 20px 0px; }
+    .content__tituloMain span {
+      text-transform: uppercase; }
+  .content__tituloSection {
     font-size: 2em;
     margin-top: 0px;
     margin-bottom: 20px;
@@ -75,9 +81,12 @@ ul {
     animation-name: aparecer; }
   .content__sinopsis {
     padding: 20px;
+    padding-left: 40px;
     box-sizing: border-box; }
     .content__sinopsis__img {
-      padding: 0px; }
+      padding: 40px;
+      padding-top: 58px;
+      box-sizing: border-box; }
   .content__capitulo {
     padding: 20px;
     box-sizing: border-box; }
@@ -98,7 +107,8 @@ ul {
         color: #3C2F87;
         text-decoration: none; }
   .content__about {
-    padding: 20px; }
+    padding: 20px 100px;
+    border-top: 1px solid white; }
     .content__about__img {
       float: left;
       margin-right: 20px; }
