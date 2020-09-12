@@ -65,7 +65,8 @@ ul {
 
 .content, .content__capitulo, .content__indexCap {
   background-color: #67368B;
-  color: white; }
+  color: white;
+  line-height: 1.7; }
   .content__tituloMain {
     font-size: 3em;
     text-align: center;
