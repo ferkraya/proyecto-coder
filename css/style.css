@@ -80,13 +80,17 @@ ul {
     animation-duration: 3s;
     animation-name: aparecer; }
   .content__sinopsis {
-    padding: 20px;
-    padding-left: 40px;
+    padding: 20px 20px 40px 50px;
     box-sizing: border-box; }
     .content__sinopsis__img {
-      padding: 40px;
-      padding-top: 58px;
+      padding: 20px 50px 40px 20px;
       box-sizing: border-box; }
+  .content__about {
+    padding: 20px 50px;
+    border-top: 1px solid white; }
+    .content__about__img {
+      float: left;
+      margin-right: 20px; }
   .content__capitulo {
     padding: 20px;
     box-sizing: border-box; }
@@ -106,12 +110,6 @@ ul {
       .content__indexCap__link:hover {
         color: #3C2F87;
         text-decoration: none; }
-  .content__about {
-    padding: 20px 100px;
-    border-top: 1px solid white; }
-    .content__about__img {
-      float: left;
-      margin-right: 20px; }
   .content__formWrap {
     display: flex;
     justify-content: center; }

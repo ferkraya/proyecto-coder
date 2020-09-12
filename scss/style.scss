@@ -122,14 +122,22 @@ ul {
   }
 
   &__sinopsis {
-    padding: 20px;
-    padding-left: 40px;
+    padding: 20px 20px 40px 50px;
     box-sizing: border-box; 
 
     &__img {
-      padding: 40px; 
-      padding-top: 58px;
+      padding: 20px 50px 40px 20px; 
       box-sizing: border-box;
+    }
+  }
+
+  &__about {
+    padding: 20px 50px;
+    border-top: 1px solid white;
+    
+    &__img {
+      float: left;
+      margin-right: 20px; 
     }
   }
 
@@ -165,16 +173,6 @@ ul {
         color: #3C2F87;
         text-decoration: none; 
       }
-    }
-  }
-
-  &__about {
-    padding: 20px 100px;
-    border-top: 1px solid white;
-    
-    &__img {
-      float: left;
-      margin-right: 20px; 
     }
   }
 
