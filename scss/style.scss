@@ -2,7 +2,8 @@
 body {
   background-color: #F2F0F5;
   font-family: 'Merriweather', sans-serif;
-  margin: 10px; }
+  margin: 10px;
+}
 
 /* CSS NAV */
 .nav {
@@ -48,7 +49,7 @@ body {
     &__menu {
       background-color: #3C2F87;
       margin: 5px 0px;
-      padding: 10px 17px;
+      padding: 10px;
     
       & li {
         padding: 0px 3px;
@@ -75,14 +76,25 @@ ul {
 
 /* CSS FOOTER */
 .footer {
-  text-align: center;
   margin-top: 20px;
+  display: flex;
+  justify-content: center;
 
-  &__link {
-    color: #67368B;
+  &__item {
+    margin: 0px 30px;
+    display: flex;
+    align-items: center;
 
-    &:hover {
-      color: #3C2F87;
+    & a {
+      margin-right: 5px;
+    }
+
+    &__link {
+      color: #67368B;
+  
+      &:hover {
+        color: #3C2F87;
+      }
     }
   }
 }
@@ -133,7 +145,7 @@ ul {
   }
 
   &__about {
-    padding: 20px 50px;
+    padding: 20px 50px 30px 50px;
     border-top: 1px solid white;
     
     &__img {

@@ -31,7 +31,7 @@ body {
     .nav__right__menu {
       background-color: #3C2F87;
       margin: 5px 0px;
-      padding: 10px 17px; }
+      padding: 10px; }
       .nav__right__menu li {
         padding: 0px 3px; }
       .nav__right__menu__link {
@@ -49,12 +49,19 @@ ul {
 
 /* CSS FOOTER */
 .footer {
-  text-align: center;
-  margin-top: 20px; }
-  .footer__link {
-    color: #67368B; }
-    .footer__link:hover {
-      color: #3C2F87; }
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; }
+  .footer__item {
+    margin: 0px 30px;
+    display: flex;
+    align-items: center; }
+    .footer__item a {
+      margin-right: 5px; }
+    .footer__item__link {
+      color: #67368B; }
+      .footer__item__link:hover {
+        color: #3C2F87; }
 
 /* ACA EMPIEZA CSS CONTENIDO */
 @keyframes aparecer {
@@ -87,7 +94,7 @@ ul {
       padding: 20px 50px 40px 20px;
       box-sizing: border-box; }
   .content__about {
-    padding: 20px 50px;
+    padding: 20px 50px 30px 50px;
     border-top: 1px solid white; }
     .content__about__img {
       float: left;
