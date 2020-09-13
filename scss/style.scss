@@ -144,8 +144,12 @@ ul {
 
   &__capitulo {
     @extend .content;
-    padding: 20px;
+    padding: 40px 60px;
     box-sizing: border-box; 
+
+    & p {
+      margin-bottom: 0.5rem;
+    }
   }
 
   &__indexCap {

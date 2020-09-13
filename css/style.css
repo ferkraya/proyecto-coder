@@ -93,8 +93,10 @@ ul {
       float: left;
       margin-right: 20px; }
   .content__capitulo {
-    padding: 20px;
+    padding: 40px 60px;
     box-sizing: border-box; }
+    .content__capitulo p {
+      margin-bottom: 0.5rem; }
   .content__indexCap {
     padding: 15px 10px;
     text-align: center; }
