@@ -63,6 +63,11 @@ ul {
       .footer__item__link:hover {
         color: #3C2F87; }
 
+/* .bodyLogin {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} PROXIMA INTENTAR CON DIV*/
 /* ACA EMPIEZA CSS CONTENIDO */
 @keyframes aparecer {
   0% {
