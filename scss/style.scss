@@ -99,12 +99,6 @@ ul {
   }
 }
 
-/* .bodyLogin {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} PROXIMA INTENTAR CON DIV*/
-
 /* ACA EMPIEZA CSS CONTENIDO */
 @keyframes aparecer {
   0% {
@@ -231,7 +225,7 @@ ul {
     &__seccion {
       margin-bottom: 30px;
       padding-left: 15px;
-
+    
       &__item {
         margin-top: 5px;
 
@@ -249,6 +243,19 @@ ul {
         }
       }
     }
+
+    &__final {
+      padding-left: 15px;
+
+      & a {
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+          color: #3C2F87;
+        }
+      }
+    }
   }
 }
 
@@ -258,6 +265,22 @@ ul {
 
 .overflow {
   overflow: auto; 
+}
+
+/* ACÁ EMPIEZA RESPONSIVE */
+@media only screen and (max-width: 321px) {
+  .footer__item__link {
+    display: none;
+  }
+ /*  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__item {
+      margin-top: 10px;
+    }
+  } */
 }
 
 @media only screen and (max-width: 768px) {
