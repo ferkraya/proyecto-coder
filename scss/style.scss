@@ -205,18 +205,40 @@ ul {
       text-align: center; 
     }
   }
-}
 
-table, th, td {
-  border: 1px solid black; }
+  &__personajes {
+    padding: 30px 50px;
 
-th, td {
-  background-color: #67368B;
-  color: white; 
-}
+    &__encabezado {
+      margin-bottom: 40px;
 
-td {
-  padding: 10px 20px; 
+      & p {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__seccion {
+      margin-bottom: 30px;
+      padding-left: 15px;
+
+      &__item {
+        margin-top: 5px;
+
+        & span {
+          text-decoration: underline;
+        }
+
+        & a {
+          text-decoration: none;
+          color: white;
+
+          &:hover {
+            color: #3C2F87;
+          }
+        }
+      }
+    }
+  }
 }
 
 #myModal {

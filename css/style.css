@@ -127,16 +127,24 @@ ul {
     padding: 15px; }
     .content__form__last {
       text-align: center; }
-
-table, th, td {
-  border: 1px solid black; }
-
-th, td {
-  background-color: #67368B;
-  color: white; }
-
-td {
-  padding: 10px 20px; }
+  .content__personajes {
+    padding: 30px 50px; }
+    .content__personajes__encabezado {
+      margin-bottom: 40px; }
+      .content__personajes__encabezado p {
+        font-size: 1.2rem; }
+    .content__personajes__seccion {
+      margin-bottom: 30px;
+      padding-left: 15px; }
+      .content__personajes__seccion__item {
+        margin-top: 5px; }
+        .content__personajes__seccion__item span {
+          text-decoration: underline; }
+        .content__personajes__seccion__item a {
+          text-decoration: none;
+          color: white; }
+          .content__personajes__seccion__item a:hover {
+            color: #3C2F87; }
 
 #myModal {
   color: #000000; }
