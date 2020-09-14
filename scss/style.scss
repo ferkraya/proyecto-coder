@@ -154,50 +154,85 @@ ul {
     }
   }
 
-  &__capitulo {
-    @extend .content;
-    padding: 40px 60px;
-    box-sizing: border-box; 
+  &__leer {
+    display: grid;
+    grid-template-columns: 9fr 1fr 2fr;
+    grid-template-rows: auto;
+    grid-template-areas: "capitulo . indexCap";
 
-    & p {
-      margin-bottom: 0.5rem;
-    }
-  }
+    &__capitulo {
+      @extend .content;
+      padding: 40px 60px;
+      box-sizing: border-box; 
+      grid-area: capitulo;
+  
+      & p {
+        margin-bottom: 0.5rem;
+      }
+      
+      &__link {
+        display: none;
+        text-align: center;
+        margin-top: 15px;
 
-  &__indexCap {
-    @extend .content;
-    padding: 15px 10px;
-    text-align: center; 
+        & a {
+          color: white;
+          margin: auto;
 
-    & h3 {
-      text-decoration: underline;
-      margin-bottom: 10px; 
-    }
-
-    &__wrap {
-      position: sticky;
-      top: 30px;
-    }
-
-    &__item {
-      margin-bottom: 20px;
-      transition: transform 1s;
-    
-      &:hover {
-        transform: scale(1.5,1.5); 
+          &:hover {
+            text-decoration: none;
+            color: #3C2F87;
+          }
+        }
       }
     }
-
-    &__link {
-      color: #ffffff; 
-
-      &:hover {
-        color: #3C2F87;
-        text-decoration: none; 
+  
+    &__indexCap {
+      @extend .content;
+      padding: 15px 10px;
+      text-align: center; 
+      grid-area: indexCap;
+  
+      & h3 {
+        text-decoration: underline;
+        margin-bottom: 10px; 
       }
-    }
-  }
+  
+      &__wrap {
+        position: sticky;
+        top: 30px;
+      }
+  
+      &__item {
+        margin-bottom: 20px;
+        transition: transform 1s;
+      
+        &:hover {
+          transform: scale(1.5,1.5); 
+        }
+      }
+  
+      &__link {
+        color: #ffffff; 
+  
+        &:hover {
+          color: #3C2F87;
+          text-decoration: none; 
+        }
+      }
 
+      &__linkB {
+        display: none;
+        color: #ffffff; 
+  
+        &:hover {
+          color: #3C2F87;
+          text-decoration: none; 
+        }
+      }
+    }    
+  }
+  
   &__formWrap {
     display: flex;
     justify-content: center; 
@@ -278,33 +313,47 @@ ul {
   .content__personajes {
     padding: 30px 30px;
   }
+
+  .content__leer__capitulo {
+    padding: 20px 30px;
+  }
+
+  .content__leer__indexCap {
+    padding-bottom: 0px;
+
+    &__link {
+      display: none;
+    }
+  
+    &__linkB {
+      display: block;
+    }
+  }  
 }
 
 @media only screen and (max-width: 769px) {
-  .mainLeer {
+  .content__leer {
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(2, auto);
     grid-template-areas: "indexCap" "capitulo";
-  }
 
-  .content__indexCap {
-    grid-area: indexCap;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 15px;
+    &__indexCap__wrap {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    
+      & h3 {
+        display: none;
+      }
   
-    & h3 {
-      display: none;
+      & div {
+        margin-bottom: 0;
+      }
     }
-
-    &__div {
-      margin-bottom: 0;
+    
+    &__capitulo__link {
+      display: block;
     }
-  }
-
-  .content__capitulo {
-    grid-area: capitulo;
-  }
+  }  
 } /* display:grid se aplica sobre el padre directo de las que van a ser las areas */
