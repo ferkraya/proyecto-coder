@@ -174,7 +174,12 @@ ul {
       margin-bottom: 10px; 
     }
 
-    &__div {
+    &__wrap {
+      position: sticky;
+      top: 30px;
+    }
+
+    &__item {
       margin-bottom: 20px;
       transition: transform 1s;
     

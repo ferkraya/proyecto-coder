@@ -110,10 +110,13 @@ ul {
     .content__indexCap h3 {
       text-decoration: underline;
       margin-bottom: 10px; }
-    .content__indexCap__div {
+    .content__indexCap__wrap {
+      position: sticky;
+      top: 30px; }
+    .content__indexCap__item {
       margin-bottom: 20px;
       transition: transform 1s; }
-      .content__indexCap__div:hover {
+      .content__indexCap__item:hover {
         transform: scale(1.5, 1.5); }
     .content__indexCap__link {
       color: #ffffff; }
