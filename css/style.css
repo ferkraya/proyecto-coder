@@ -166,18 +166,13 @@ ul {
 /* ACÁ EMPIEZA RESPONSIVE */
 @media only screen and (max-width: 321px) {
   .footer__item__link {
-    display: none; }
-  /*  .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: none; } }
 
-    &__item {
-      margin-top: 10px;
-    }
-  } */ }
+@media only screen and (max-width: 361px) {
+  .content__personajes {
+    padding: 30px 30px; } }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 769px) {
   .mainLeer {
     display: grid;
     grid-template-columns: auto;
