@@ -135,10 +135,19 @@ ul {
   }
 
   &__sinopsis {
-    padding: 20px 20px 40px 50px;
-    box-sizing: border-box; 
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "texto img";
+
+    &__texto {
+      grid-area: texto;
+      padding: 20px 20px 40px 50px;
+      box-sizing: border-box; 
+    }
 
     &__img {
+      grid-area: img;
       padding: 20px 50px 40px 20px; 
       box-sizing: border-box;
     }
@@ -303,32 +312,22 @@ ul {
 }
 
 /* ACÁ EMPIEZA RESPONSIVE */
-@media only screen and (max-width: 321px) {
-  .footer__item__link {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 361px) {
-  .content__personajes {
-    padding: 30px 30px;
+@media only screen and (max-width: 1025px) {
+  .content__sinopsis {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "texto" "img";
   }
 
-  .content__leer__capitulo {
-    padding: 20px 30px;
+  .content__sinopsis__texto {
+    padding: 20px;
   }
 
-  .content__leer__indexCap {
-    padding-bottom: 0px;
-
-    &__link {
-      display: none;
-    }
-  
-    &__linkB {
-      display: block;
-    }
-  }  
+  .content__sinopsis__img {
+    padding: 10px 60px 20px 60px;
+    box-sizing: border-box;
+  }
 }
 
 @media only screen and (max-width: 769px) {
@@ -357,3 +356,59 @@ ul {
     }
   }  
 } /* display:grid se aplica sobre el padre directo de las que van a ser las areas */
+
+@media only screen and (max-width: 541px) {
+  .content__sinopsis__img {
+    padding: 10px 30px 20px 30px;
+    box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width: 361px) {
+  .content__personajes {
+    padding: 30px 30px;
+  }
+
+  .content__leer__capitulo {
+    padding: 20px 30px;
+  }
+
+  .content__leer__indexCap {
+    padding-bottom: 0px;
+
+    &__link {
+      display: none;
+    }
+  
+    &__linkB {
+      display: block;
+    }
+  }
+  
+  .content__tituloMain {
+    font-size: 2.5em;
+    padding-bottom: 10px;
+  }
+
+  .content__sinopsis__texto {
+    padding: 20px 10px 10px 10px;
+  }
+
+  .content__sinopsis__img {
+    padding: 10px 10px 20px 10px;
+  }
+
+  .content__about {
+    padding: 20px 30px;
+  }
+}
+
+@media only screen and (max-width: 321px) {
+  .footer__item__link {
+    display: none;
+  }
+
+  .content__about__img {
+    margin-bottom: 20px;
+  }
+}
