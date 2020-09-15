@@ -2,7 +2,8 @@
 body {
   background-color: #F2F0F5;
   font-family: 'Merriweather', sans-serif;
-  margin: 10px; }
+  padding: 10px;
+  min-height: 100vh; }
 
 /* CSS NAV */
 .nav {
@@ -254,4 +255,6 @@ ul {
   .footer__item__link {
     display: none; }
   .content__about__img {
-    margin-bottom: 20px; } }
+    margin-bottom: 20px; }
+  .content__tituloMain {
+    font-size: 2.3em; } }
